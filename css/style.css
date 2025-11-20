@@ -1,0 +1,369 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+
+.momo-signature-regular {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.navbar .navbar-brand {color: #FFFFFF; /*#F0AEAF*/}
+
+
+.nav-link{color: #FFFFFF; font-weight: bold}
+
+.nav-link:hover{color: #F0AEAF}
+
+@media (max-width: 480px){
+	boday{
+		margin-top: 50px;
+	}
+	#navbar-example2{display: flex; justify-content: center; align-items: center}
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 25px;
+  margin-right: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: calc( 100% - 75px );
+  float: right;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  left: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #ccc;
+  border-left: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  left: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-right: 14px solid #fff;
+  border-left: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  margin-right: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: left;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-right-width: 0;
+  border-left-width: 15px;
+  right: -15px;
+  left: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-right-width: 0;
+  border-left-width: 14px;
+  right: -14px;
+  left: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.timeline-body {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.pdf-container {
+  width: 100%;
+  height: 90vh; 
+  overflow: hidden;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+
+
+
+
+/* Hiệu ứng chuyển màu hồng pastel <-> xanh pastel */
+body {
+    background: linear-gradient(120deg, #ffd6e7, #d8f6ff);
+    background-size: 400% 400%;
+    animation: pastelChange 12s ease-in-out infinite;
+}
+
+/* Giữ nền các section là trong suốt để thấy màu pastel chạy */
+section, .scrollspy-example {
+    background: transparent !important;
+}
+
+/* Animation đổi màu */
+@keyframes pastelChange {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+
+
+/* ==== BACKGROUND GRADIENT ANIMATION ==== */
+body {
+    background: linear-gradient(120deg, #ffb4d6, #a8e8ff);
+    background-size: 300% 300%;
+    animation: bgChange 10s ease infinite;
+}
+
+/* Hiệu ứng chuyển màu */
+@keyframes bgChange {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==== NAVBAR MÀU HỒNG ĐẬM ==== */
+.navbar {
+    background-color: #e7388d !important; /* Hồng đậm */
+}
+
+/* ==== HEADER MENU ACTIVE ==== */
+.nav-link.active,
+.nav-link:hover {
+    color: white !important;
+    background-color: #ff77b7 !important; /* hồng tươi */
+}
+
+/* ==== PHẦN LIÊN HỆ MÀU HỒNG ĐẬM ==== */
+#scrollspyHeading5 + .container {
+    background-color: #ff77b7;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Màu chữ trong phần liên hệ → trắng */
+#scrollspyHeading5 + .container h1,
+#scrollspyHeading5 + .container h3,
+#scrollspyHeading5 + .container p,
+#scrollspyHeading5 + .container label {
+    color: white !important;
+}
+
+/* Input trong phần liên hệ nổi bật */
+#scrollspyHeading5 + .container input,
+#scrollspyHeading5 + .container textarea {
+    background: #ffe6f3;
+    border: 1px solid #ffb4d6;
+}
+
+#scrollspyHeading5 + .container button {
+    background-color: white;
+    color: #e7388d;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+/* NƠ & NGÔI SAO PASTEL RẢI RÁC */
+/* ----------------------------- */
+.decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ribbon, .star {
+    position: absolute;
+    opacity: 0.7;
+}
+
+/* Nơ Pastel */
+.ribbon {
+    width: 40px;
+    height: 40px;
+    background: url('images/ribbon.png') no-repeat center/contain;
+    animation: float 6s infinite ease-in-out;
+}
+
+/* Ngôi sao xanh pastel */
+.star {
+    width: 30px;
+    height: 30px;
+    background: url('images/star.png') no-repeat center/contain;
+    animation: float2 7s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes float2 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(25px); }
+    100% { transform: translateY(0px); }
+}
+
+
+
+
+
+/* --- STORY SLIDER --- */
+.story-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.story-slider {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.story-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+.story-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 150, 170, 0.8);
+  border: none;
+  color: white;
+  font-size: 35px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.story-btn:hover {
+  background: rgba(255, 100, 130, 1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
